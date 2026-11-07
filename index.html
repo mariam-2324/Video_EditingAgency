@@ -23,15 +23,7 @@
 
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link ripple" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#link">About</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#link">Services</a></li>
-        <li class="nav-item"><a class="nav-link ripple" href="#link">Contact</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link ripple dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navLinks"></ul>
           </ul>
         </li>
       </ul>
@@ -45,84 +37,18 @@
 </nav>
 
 <!-- ========== HERO SECTION ================================= -->
-<div class="card text-bg-dark video-card">
-  <!-- Background video -->
-  <video class="video-bg" autoplay muted loop playsinline poster="/videos/poster.jpg">
-    <source src="/videoEditPro1.mp4" type="video/mp4">
-  </video>
-
-  <!-- Blur layer + text -->
-  <div class="card-img-overlay video-blur d-flex flex-column justify-content-center">
-    <h5 class="card-title">Where Raw Footage Becomes Magic.</h5>
-    <p class="card-text"><strong class="subtext text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">Cuts, color, sound, and motion</strong>, blended into stories that hold attention from the first second to the last.</p>
-    <button class="btn glow-btn">View Our Work</button>
+<div class="card text-bg-dark video-card" id="videoCard">
+  
   </div>
 </div>
 
 <!-- =================================== GRID SYSTEM =========================================== -->
 
-<section id="services" class="py-5 gridSystem">
+<section id="services" class="py-5 gridSystem" id="serviceGrid">
   <div class="container">
     <h2 class="text-center section-title glow-btn">Our Services</h2>
-
-    <div class="row g-4">
-
-      <div class="col-12 col-md-6 col-lg-4">
-		
-        <div class=" service-card h-100 text-center p-4">
-			<img src="/videoEdit1.jpg" alt="">
-          <i class="bi bi-camera-reels tech-icon"></i>
-          <h5 class="card-titleGrid mt-3">Video Editing</h5>
-          <p class="card-textGrid">Clean cuts and smooth transitions for ads, reels, and films.</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="service-card h-100 text-center p-4">
-			<img src="/videoEdit2.jpg" alt="">
-          <i class="bi bi-stars tech-icon"></i>
-          <h5 class="card-titleGrid mt-3">Motion Graphics</h5>
-          <p class="card-textGrid">Animated titles, logos, and effects that grab attention.</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="service-card h-100 text-center p-4">
-			<img src="/videoEdit3.jpg" alt="">
-          <i class="bi bi-palette tech-icon"></i>
-          <h5 class="card-titleGrid mt-3">Color Grading</h5>
-          <p class="card-textGrid">Cinematic color that gives your video a premium look.</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="service-card h-100 text-center p-4">
-			<img src="/videoEdit4.jpg" alt="">
-          <i class="bi bi-music-note-beamed tech-icon"></i>
-          <h5 class="card-titleGrid mt-3">Sound Design</h5>
-          <p class="card-textGrid">Music, sound effects, and clear audio mixing.</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="service-card h-100 text-center p-4">
-			<img src="/videoEdit5.jpg" alt="">
-          <i class="bi bi-phone tech-icon"></i>
-          <h5 class="card-titleGrid mt-3">Social Media Content</h5>
-          <p class="card-textGrid">Vertical videos made for Instagram, TikTok, and YouTube Shorts.</p>
-        </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="service-card h-100 text-center p-4">
-			<img src="/videoEdit6.jpg" alt="">
-          <i class="bi bi-lightning-charge tech-icon"></i>
-          <h5 class="card-titleGrid mt-3">Fast Delivery</h5>
-          <p class="card-textGrid">Quick turnaround without compromising quality.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="row g-4" id="servicesRow"></div>
+     </div>
 </section>
 
 <!-- ----------------------- FORM SECTION ------------------------ -->

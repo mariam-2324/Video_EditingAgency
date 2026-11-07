@@ -20,7 +20,7 @@ body {
   --spin-angle: 180deg;
 }
 
-/* Word ke andar letters toote nahi */
+
 .word {
   display: inline-block;
   white-space: nowrap;
@@ -30,7 +30,7 @@ body {
   display: inline-block;
   transform-origin: center bottom;
   animation: jump 3s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 0.06s); /* ek ke baad ek uchhalega (wave) */
+  animation-delay: calc(var(--i) * 0.06s); 
 }
 
 @keyframes jump {
@@ -80,7 +80,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
   border: 0;
-  border-radius: 0;              /* kone seedhe, poori chori */
+  border-radius: 0; 
 }
 
 .video-bg {
@@ -95,12 +95,12 @@ body {
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  padding: 90px 5% 2rem;         /* upar 90px: fixed navbar ke neeche na chhupe */
+  padding: 90px 5% 2rem;         
 }
 
-/* Overlay ko card ke saath barhne dein, taake button na kate */
+
 .video-card .video-blur {
-  position: relative;      /* absolute ki jagah */
+  position: relative;    
   inset: auto;
   width: 100%;
   min-height: 100svh;
@@ -116,7 +116,7 @@ body {
   font-size: clamp(1rem, 4vw, 30px);
 }
 
-/* Mobile par button poori chori mein aur chhota */
+
 @media (max-width: 575.98px) {
   .video-card .btn {
     width: 100%;
@@ -132,37 +132,6 @@ body {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.25); }
 }
-/* .btn{        fa-bounce
-  width: 400px;
-  height: 60px;
-  margin-left: 500px;
-  border-radius: 20px;
-  font-size: x-large;
-} */
-
-/* .navbar .nav-link {
-  padding: 0.5rem 1rem;
-  font-size: 1.05rem;
-  color: blue;
-}
-
-.search {
-  flex-shrink: 0;
-}
-
-.searchInput {
-  width: 200px;
-  color: blue;
-}
-
-.btn-search {
-  white-space: nowrap;
-}
-
-@media (max-width: 991.98px) {
-  .search,
-  .searchInput { width: 100%; }
-} */
 
  .navbar .nav-link{
   width: 90%;
@@ -194,20 +163,40 @@ body {
 }
 
 
+.ripple {
+  position: relative;
+  overflow: hidden; 
+}
+
+.ripple .ripple-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 255, 0.25);
+  transform: scale(0);
+  animation: ripple-anim 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-anim {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
 /* --------------GRID CARDS HEADING-------------- */
 
 .section-title {
-  --btn-bg: #1e3a8a;             /* heading ka andar ka rang */
-  --glow: #60a5fa;               /* ghoomne wali roshni ka rang */
-
+  --btn-bg: #1e3a8a;             
+  --glow: #60a5fa;               
   display: block;
-  width: fit-content;            /* text ke hisab se chori */
+  width: fit-content;           
   max-width: 100%;
-  margin: 50px auto 60px;        /* auto se bilkul center, 350px ki zaroorat nahi */
+  margin: 50px auto 60px; 
   padding: 15px 40px;
   border-radius: 20px;
   font-size: clamp(2rem, 6vw, 60px);
-  color: #ffffff !important;     /* text-primary ko override */
+  color: #ffffff !important;
 
   border: 3px solid transparent;
   background:
@@ -226,21 +215,12 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .contact-title { animation: none; }
 }
-/* .section-title {
-  margin-top: 150px;
-  margin-bottom: 150px;
-  margin-left: 350px;
-  padding: 10px;
-  border-radius: 20px;
-  font-size: 60px;
-  width: 500px;
-  height: 100px;
-} */
+
 /* CSS STYLE FOR THE GRID CARDS */
 
 .tech-icon {
   font-size: 3rem;
-  color: #dc3545;                 /* red, aap ke "View Our Work" button se match */
+  color: #18465a; 
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
@@ -309,17 +289,17 @@ body {
 }
 
 .contact-title {
-  --btn-bg: #1e3a8a;             /* heading ka andar ka rang */
-  --glow: #60a5fa;               /* ghoomne wali roshni ka rang */
+  --btn-bg: #1e3a8a;            
+  --glow: #60a5fa;               
 
   display: block;
-  width: fit-content;            /* text ke hisab se chori */
+  width: fit-content;           
   max-width: 100%;
-  margin: 50px auto 60px;        /* auto se bilkul center, 350px ki zaroorat nahi */
+  margin: 50px auto 60px;        
   padding: 15px 40px;
   border-radius: 20px;
   font-size: clamp(2rem, 6vw, 60px);
-  color: #ffffff !important;     /* text-primary ko override */
+  color: #ffffff !important;     
 
   border: 3px solid transparent;
   background:
@@ -434,19 +414,7 @@ body {
   .btn-send { transition: none; }
 }
 
-/* :root{
-  all: unset;
-  font-size: 24px;
-  margin-top: 100px;
-  padding: 14px 52px;
-  background: hsl(0, 0%, 0%);
-  color: white;
-  text-transform: uppercase;
-  border-radius: 100px;
-  cursor: pointer;
-} */
 
-/* Angle ko animate karne ke liye (zaroori) */
 @property --angle {
   syntax: '<angle>';
   initial-value: 0deg;
@@ -461,8 +429,8 @@ body {
 .btn.glow-btn:hover,
 .btn.glow-btn:focus,
 .btn.glow-btn:active {
-  --btn-bg: #1e3a8a;             /* button ka andar ka rang */
-  --glow: #60a5fa;               /* ghoomne wali roshni ka rang */
+  --btn-bg: #1e3a8a;             
+  --glow: #60a5fa; 
 
   color: #ffffff;
   border: 3px solid transparent;
@@ -480,7 +448,6 @@ body {
   filter: drop-shadow(0 0 6px rgba(59, 130, 246, 0.6));
 }
 
-/* Hover par sirf andar ka rang thora roshan */
 .btn.glow-btn:hover {
   --btn-bg: #1d4ed8;
 }
