@@ -18,7 +18,7 @@ A responsive, single-page website for a video editing agency, built with **HTML,
 | [Vite](https://vitejs.dev) | latest | Dev server and production bundler |
 | [Bootstrap](https://getbootstrap.com) | 5.3.3 | Grid, navbar, cards, buttons, forms |
 | [Bootstrap Icons](https://icons.getbootstrap.com) | latest | Icons on service cards and the send button |
-| [Fontsource](https://fontsource.org) (Google Fonts) | latest | Self-hosted fonts (Lobster Two for headings, Poppins for body) |
+| [Fontsource](https://fontsource.org) (Google Fonts) | latest | Self-hosted fonts (Poppins) |
 
 **Why these choices**
 
