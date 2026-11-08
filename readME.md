@@ -156,6 +156,8 @@ import './style.css';                                  // imported last so it ca
 
 The number must include the country code, with no `+`, spaces or leading zero (for example `923001234567`).
 
+![whatsAppImage](whatAppConfigureVideoEditProject.png)
+
 ### 5.8 Glowing animated border
 
 Applied with the `glow-btn` class (buttons) and on the contact heading.
@@ -172,6 +174,39 @@ Applied with the `glow-btn` class (buttons) and on the contact heading.
 Theme colours are CSS variables in `:root` (`--blue`, `--blue-dark`, `--blue-soft`, `--offwhite`). Changing these changes the whole theme. The send button includes a Bootstrap Icons paper plane (`bi-send-fill`) that moves up and to the right on hover.
 
 ---
+
+## Responsive Design
+
+The website is fully responsive and adapts to mobile phones, tablets, laptops and large desktop screens. It follows a mobile-first approach using Bootstrap 5.3's grid system and breakpoints, combined with custom CSS for fluid sizing.
+
+<p align="center">
+  <img src="videoEditWebsiteResponsive.png" alt="Responsive preview" width="30%">
+</p>
+
+### Screen sizes
+
+| Device | Width | Layout |
+|---|---|---|
+| Mobile | below 576px | Single column, collapsed navbar menu, full-width buttons |
+| Tablet | 768px to 991px | Two service cards per row, collapsed navbar menu |
+| Desktop | 992px and above | Three service cards per row, full horizontal navbar |
+
+### How responsiveness is achieved
+
+- **Bootstrap grid:** service cards use `col-12 col-md-6 col-lg-4`, which gives 1, 2 or 3 cards per row depending on screen width. `h-100` keeps all card heights equal.
+- **Collapsible navbar:** `navbar-expand-lg` turns the navbar into a hamburger menu below 992px. The search form becomes full-width on mobile.
+- **Fluid typography:** hero title, description and section headings use `clamp()` (for example `clamp(2.2rem, 10vw, 100px)`), so text scales smoothly instead of overflowing on small screens.
+- **Full-screen hero and contact sections:** `min-height: 100svh` accounts for the mobile browser address bar, so sections fill the screen without being cut off.
+- **Background videos:** `object-fit: cover` makes videos fill their container at any aspect ratio. The `muted`, `playsinline` and `autoplay` attributes allow them to play on mobile browsers.
+- **Mobile-optimized media:** videos are compressed (H.264 MP4, no audio, short loop) so they load quickly on mobile networks.
+- **Responsive buttons:** buttons are `width: min(400px, 100%)` on desktop and full width on small screens.
+- **No horizontal scrolling:** `overflow-x: clip` on the services section keeps the slide-in card animations from creating a sideways scrollbar.
+- **Accessibility:** animations are disabled for users who enable "reduce motion" in their device settings (`prefers-reduced-motion`).
+
+### Tested on
+
+- Chrome DevTools device mode (iPhone SE, iPhone 14, iPad, Desktop)
+- Chrome, Edge, Firefox and Safari (latest versions)
 
 ## 6. Customization Guide
 
@@ -202,6 +237,10 @@ const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
 > **Note:** The number is still visible in the final built JavaScript. This only makes it easier to change. Anything in frontend code is public.
 
 ---
+
+### Full Website image can be viewed here:
+
+![Image here](videoEditingAgencyProject.png)
 
 ## 10. Author
 
