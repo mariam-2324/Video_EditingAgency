@@ -156,7 +156,7 @@ import './style.css';                                  // imported last so it ca
 
 The number must include the country code, with no `+`, spaces or leading zero (for example `923001234567`).
 
-![whatsAppImage](whatAppConfigureVideoEditProject.png)
+
 
 ### 5.8 Glowing animated border
 
