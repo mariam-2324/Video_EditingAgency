@@ -196,3 +196,9 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 
 	window.open(url, "_blank");
 });
+
+
+document.querySelectorAll("video").forEach((v) => {
+  v.muted = true;
+  v.play().catch((err) => console.log("Video error:", err.name, err.message));
+});
